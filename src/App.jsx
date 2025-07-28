@@ -29,8 +29,7 @@ Atenciosamente,
 
 Pedro Felipe
 (74)999105013
-pedro.alves@olma.com.br `;
-    console.log(email);
+pedro.alves@olma.com.br `;   
     setMensagem(email);
   }
 
@@ -39,6 +38,12 @@ pedro.alves@olma.com.br `;
     if (file) {
       setComprovante(file);
     }}
+
+  function copiarMensagem() {
+    navigator.clipboard.writeText(mensagem);
+    alert('Mensagem copiada para a área de transferência!');
+    setMensagem(''); // Limpa a mensagem após copiar
+  }
 
   return (
     <>
@@ -99,8 +104,10 @@ pedro.alves@olma.com.br `;
           </p>
       )}
       </div>
-      <button type="button" onClick={gerarEmail}>Gerar Email</button>
-      <button onClick={copiarMensagem} disabled={!mensagem}>Copiar mensagem</button>
+      <button type="button" onClick={gerarEmail}>Gerar Email</button> 
+      <button onClick={copiarMensagem} 
+      disabled={!mensagem}>Copiar mensagem</button>
+
 
       {mensagem && (
         <div style={{ marginTop: '1rem', whiteSpace: 'pre-line', border: '1px solid #ccc', padding: '1rem' }}>
@@ -110,7 +117,7 @@ pedro.alves@olma.com.br `;
         
 
      </form>
-     <p>{mensagem}</p>
+    
     </>
   )
 }
