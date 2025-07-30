@@ -91,7 +91,7 @@ pedro.alves@olma.com.br `;
       </div>
       <div>
         <label htmlFor="file" className={styles.uploadButton}>
-         📎 Escolher comprovante
+         📎 Anexar comprovante
         </label>
         <input 
         type="file"
