@@ -44,8 +44,10 @@ pedro.alves@olma.com.br `;
   }
 
   return (
-    <>  
-     <form action="" className='${styles.form}'>
+    
+    <div className={styles.container}>
+      <h1>gerador de email</h1>
+      <form action="" className={styles.form}>
       <div>
         <label htmlFor="date">data:</label>
           <input 
@@ -77,7 +79,7 @@ pedro.alves@olma.com.br `;
            />
       </div>
       <div>
-        <label htmlFor="descricption">descrição</label>
+        <label htmlFor="descricption">descrição:</label>
           <input 
            type="textarea"
            name='descricption'
@@ -88,13 +90,18 @@ pedro.alves@olma.com.br `;
             />
       </div>
       <div>
-        <label htmlFor="file">Comprovante PDF</label>
-          <input 
-           type="file"
-           name='file'
-           id='file'
-           accept=".pdf,image/*" onChange={handleFileChange}
-           />
+        <label htmlFor="file" className={styles.uploadButton}>
+         📎 Escolher comprovante
+        </label>
+        <input 
+        type="file"
+        name="file"
+        id="file"
+        accept=".pdf,image/*"
+        onChange={handleFileChange}
+        className={styles.hiddenInput}
+        />
+
 
           {comprovante && (
           <p style={{ color: 'green' }}>
@@ -113,10 +120,10 @@ pedro.alves@olma.com.br `;
           {mensagem}
         </div>)}
         
-
      </form>
-    
-    </>
+
+    </div>
+     
   )
 }
 

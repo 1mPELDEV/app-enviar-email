@@ -1,3 +1,73 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+   
+}
+input[type="file"]{
+    color:red;
+}
+button{
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+ 
+}
+.uploadButton {
+  color: white;
+  padding: 0.5em 1.2em;
+  border-radius: 8px;
+  font-size: 1rem;
+  display: inline-block;
+  font-weight: 500;
+  margin-top: 8px;
+  background-color: #FFF;
+  transition: border-color 0.25s;
+  color: black;
+} 
+
+.hiddenInput {
+  display: none;
+}
+
 .form{
-    background-color: red;
+    text-align: left;
+}
+.form {
+  display: grid;
+  gap: 12px;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+label {
+    text-align: center;
 }
